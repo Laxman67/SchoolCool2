@@ -36,74 +36,95 @@ const Sidebar = () => {
   };
 
   return (
-    <SidebarContainer style={{ width: isopen ? '250px' : '80px' }}>
-      <SidebarHeader>
-       <Logo src={'https://cdn-icons-png.flaticon.com/256/1063/1063385.png'} />
-      </SidebarHeader>
-      <SidebarNav>
-        <SidebarNavItem>
-          <BsGraphUp />
-          <StyledLink to="/students/dashboard">Dashboard</StyledLink>
-        </SidebarNavItem>
-        <SidebarNavItem>
-          <BsPeople />
-          <StyledLink to="/students/classes">Classes</StyledLink>
-        </SidebarNavItem>
+       <SidebarContainer style={{ width: isopen ? "250px" : "80px" }}>
+            <SidebarHeader>
+                 <Logo
+                      src={
+                           "https://cdn-icons-png.flaticon.com/256/1063/1063385.png"
+                      }
+                      style={{
+                           backgroundColor: "beige",
+                           padding: "10px ",
+                           borderRadius: "5px",
+                      }}
+                 />
+            </SidebarHeader>
+            <SidebarNav>
+                 <SidebarNavItem>
+                      <BsGraphUp />
+                      <StyledLink to="/students/dashboard">
+                           Dashboard
+                      </StyledLink>
+                 </SidebarNavItem>
+                 <SidebarNavItem>
+                      <BsPeople />
+                      <StyledLink to="/students/classes">Classes</StyledLink>
+                 </SidebarNavItem>
 
-        <SidebarNavItem>
-          <BsBook />
-          <StyledLink to="/students/assignments">Assignments</StyledLink>
-        </SidebarNavItem>
-        <SidebarNavItem>
-          <BsBook />
-          <StyledLink to="/students/exam">Exams</StyledLink>
-        </SidebarNavItem>
+                 <SidebarNavItem>
+                      <BsBook />
+                      <StyledLink to="/students/assignments">
+                           Assignments
+                      </StyledLink>
+                 </SidebarNavItem>
+                 <SidebarNavItem>
+                      <BsBook />
+                      <StyledLink to="/students/exam">Exams</StyledLink>
+                 </SidebarNavItem>
 
-        <SidebarNavItem>
-          <SidebarIcon>
-            <BsGraphDown />
-          </SidebarIcon>
-          <StyledLink to="/students/performance">Performance</StyledLink>
-        </SidebarNavItem>
+                 <SidebarNavItem>
+                      <SidebarIcon>
+                           <BsGraphDown />
+                      </SidebarIcon>
+                      <StyledLink to="/students/performance">
+                           Performance
+                      </StyledLink>
+                 </SidebarNavItem>
 
-        <SidebarNavItem>
-          <SidebarIcon>
-            <BsCalendar />
-          </SidebarIcon>
-          <StyledLink to="/students/attendence">Attendence</StyledLink>
-        </SidebarNavItem>
+                 <SidebarNavItem>
+                      <SidebarIcon>
+                           <BsCalendar />
+                      </SidebarIcon>
+                      <StyledLink to="/students/attendence">
+                           Attendence
+                      </StyledLink>
+                 </SidebarNavItem>
 
-        <SidebarNavItem>
-          <SidebarIcon>
-            <BsBook />
-          </SidebarIcon>
-          <StyledLink to="/students/library">Library</StyledLink>
-        </SidebarNavItem>
+                 <SidebarNavItem>
+                      <SidebarIcon>
+                           <BsBook />
+                      </SidebarIcon>
+                      <StyledLink to="/students/library">Library</StyledLink>
+                 </SidebarNavItem>
 
-        <SidebarNavItem>
-          <SidebarIcon>
-            <BsChatDots />
-          </SidebarIcon>
-          <StyledLink to="/students/communication">Announcements</StyledLink>
-        </SidebarNavItem>
+                 <SidebarNavItem>
+                      <SidebarIcon>
+                           <BsChatDots />
+                      </SidebarIcon>
+                      <StyledLink to="/students/communication">
+                           Announcements
+                      </StyledLink>
+                 </SidebarNavItem>
 
-        <SidebarNavItem>
-          <SidebarIcon>
-            <BsGear />
-          </SidebarIcon>
-          <StyledLink to="/students/settings">Setting and Profile</StyledLink>
-        </SidebarNavItem>
-        <ToggleButton
-          onClick={() => {
-            toggleSidebar();
-          }}
-        >
-          <ToggleIcon isopen={toString(isopen)}>
-            <AiFillCaretLeft />
-          </ToggleIcon>
-        </ToggleButton>
-      </SidebarNav>
-    </SidebarContainer>
+                 <SidebarNavItem>
+                      <SidebarIcon>
+                           <BsGear />
+                      </SidebarIcon>
+                      <StyledLink to="/students/settings">
+                           Setting and Profile
+                      </StyledLink>
+                 </SidebarNavItem>
+                 <ToggleButton
+                      onClick={() => {
+                           toggleSidebar();
+                      }}
+                 >
+                      <ToggleIcon isopen={toString(isopen)}>
+                           <AiFillCaretLeft />
+                      </ToggleIcon>
+                 </ToggleButton>
+            </SidebarNav>
+       </SidebarContainer>
   );
 };
 

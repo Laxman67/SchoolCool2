@@ -1,4 +1,4 @@
-import { configDotenv } from 'dotenv';
+
 import express from 'express';
 import cors from 'cors';
 import DBConnect from './database/DBConnect.js';
@@ -11,10 +11,12 @@ import attendanceRouter from './routes/attendanceRoute.js';
 import classRouter from './routes/ClassRoute.js';
 import examRouter from './routes/examRoute.js';
 import teacherRouter from './routes/teacherRoute.js';
+import dotenv from 'dotenv'
 
 const app = express();
-configDotenv();
 
+// Dotenv Config
+dotenv.config({ path: './config/config.env' });
 // Database
 DBConnect();
 

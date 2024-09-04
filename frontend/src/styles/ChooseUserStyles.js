@@ -32,7 +32,7 @@ export const UserSection = styled.div`
   margin: 10px;
   border-radius: 10px;
   box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3), -0px -0px 5px white;
-  background-color: beige;
+  background-color: #F5F7F8;
   display: flex;
   flex-direction: column;
   gap: 5px;
@@ -48,7 +48,7 @@ export const Title = styled.h2`
   font-size: 24px;
   font-weight: bold;
   margin-bottom: 20px;
-  color: #ff4500; /* Admin: Orange color */
+  color: #227B94; /* Admin: Orange color */
 
   @media screen and (max-width: 768px) {
     font-size: 20px;
@@ -56,7 +56,7 @@ export const Title = styled.h2`
 `;
 
 export const Button = styled(Link)`
-  background-color: #90ee90; /* Student: Light green color */
+  background-color: #78B7D0; /* Student: Light green color */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -67,7 +67,7 @@ export const Button = styled(Link)`
   transition: background-color 0.3s ease;
 
   &:hover {
-    background-color: #7cfc00; /* Darker shade of green on hover */
+    background-color: #227B94; /* Darker shade of green on hover */
   }
 
   @media screen and (max-width: 768px) {

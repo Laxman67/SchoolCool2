@@ -1,61 +1,74 @@
 import {
-  Navbar,
-  Logo,
-  NavigationLinks,
-  NavLink,
-  ButtonsContainer,
-  LoginButton,
-  GuestButton,
-  HomeContainer,
-  SchoolInfo,
-  SchoolImage,
-  Title,
-  AdminRegisterLink,
-  LoremTextContainer,
-} from '../styles/styles';
-import background from '../assets/indian-group-college.png';
+     Navbar,
+     Logo,
+     NavigationLinks,
+     NavLink,
+     ButtonsContainer,
+     LoginButton,
+     GuestButton,
+     HomeContainer,
+     SchoolInfo,
+     SchoolImage,
+     Title,
+     AdminRegisterLink,
+     LoremTextContainer,
+} from "../styles/styles";
+import background from "../assets/indian-group-college.png";
 // import logo from '../assets/logo.jpeg';
-import { LoremIpsum } from 'lorem-ipsum';
+import { LoremIpsum } from "lorem-ipsum";
 
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from "react-router-dom";
 
 const lorem = new LoremIpsum();
 
 const Home = () => {
-  const navigate = useNavigate();
-  const loremText = lorem.generateParagraphs(1);
+     const navigate = useNavigate();
+     const loremText = lorem.generateParagraphs(1);
 
-  const handleClick = () => {
-    navigate('/choose-user');
-  };
-  return (
-    <>
-      <Navbar>
-        <Logo src={'logo'} alt="Logo" />
-        <NavigationLinks>
-          <NavLink href="#">About Us </NavLink>
-          <NavLink href="#">Products</NavLink>
-          <NavLink href="#">Contact us</NavLink>
-        </NavigationLinks>
-        <ButtonsContainer>
-          <LoginButton onClick={handleClick}>Sign In</LoginButton>
-          <GuestButton onClick={handleClick}>Guest Login</GuestButton>
-        </ButtonsContainer>
-      </Navbar>
-      <HomeContainer>
-        <SchoolInfo>
-          <Title>School Management System</Title>
-          <LoremTextContainer>
-            <p>{loremText}</p>
-          </LoremTextContainer>
-          <SchoolImage
-            src="https://smartstudent.app/media/2022/09/managment-software.png"
-            alt="AL"
-          />
-        </SchoolInfo>
-      </HomeContainer>
-    </>
-  );
+     const handleClick = () => {
+          navigate("/choose-user");
+     };
+     return (
+          <>
+               <Navbar>
+                    <Logo
+                         src={
+                              "https://cdn-icons-png.flaticon.com/256/1063/1063385.png"
+                         }
+                         style={{
+                              backgroundColor: "beige",
+                              padding: "10px ",
+                              borderRadius: "5px",
+                         }}
+                    />
+                    <NavigationLinks>
+                         <NavLink href="#">About Us </NavLink>
+                         <NavLink href="#">Products</NavLink>
+                         <NavLink href="#">Contact us</NavLink>
+                    </NavigationLinks>
+                    <ButtonsContainer>
+                         <LoginButton onClick={handleClick}>
+                              Sign In
+                         </LoginButton>
+                         <GuestButton onClick={handleClick}>
+                              Guest Login
+                         </GuestButton>
+                    </ButtonsContainer>
+               </Navbar>
+               <HomeContainer>
+                    <SchoolInfo>
+                         <Title>School Management System</Title>
+                         <LoremTextContainer>
+                              <p>{loremText}</p>
+                         </LoremTextContainer>
+                         <SchoolImage
+                              src="https://smartstudent.app/media/2022/09/managment-software.png"
+                              alt="AL"
+                         />
+                    </SchoolInfo>
+               </HomeContainer>
+          </>
+     );
 };
 
 export default Home;
